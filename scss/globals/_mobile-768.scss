@@ -1,0 +1,65 @@
+@media (max-width: 768px) {
+  // specificity affects media queries
+  // header
+  .header .logo {
+    width: 200px;
+  }
+
+  .header .header-content {
+    text-align: center;
+    padding: 0 20px;
+  }
+
+  // first section
+  .sub-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+
+    img {
+      width: 250px;
+      margin: auto;
+    }
+
+    & > div:last-of-type {
+      justify-self: center;
+    }
+  }
+
+  // categories
+  .categories {
+    .covers {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  // live
+  .live-border{
+    padding: 30px 10px;
+  }
+
+  // live sports
+  .live-sport{
+    background: url('../../img/live-sports-small.jpg') no-repeat center center / cover;
+
+    &-content{
+      top: 30px;
+      left: 30px;
+      margin-top: 60px;
+    }
+  }
+
+  // footer
+  .footer{
+    &-lists{
+      flex-direction: column;
+    }
+  }
+
+  // modal
+  .modal{
+    &-box{
+      width: 350px;
+    }
+  }
+}

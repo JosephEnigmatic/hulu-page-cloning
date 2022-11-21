@@ -1,0 +1,44 @@
+// colors
+$white: hsl(0 0% 100%);
+$bg-color: hsl(0 0% 11%);
+$gray: hsl(0, 0%, 50%);
+$green: #00ed82;
+$light-green: hsl(150, 81%, 51%);
+$bg-2-color: hsl(240, 2%, 8%);
+$off-white: hsl(223, 21%, 94%);
+
+// background property
+$bg-set: no-repeat center center / cover;
+
+$dark-gradient: linear-gradient(
+  318.68deg,
+  hsl(195, 72%, 21%) 0%,
+  hsl(192, 66%, 15%) 59%,
+  hsl(209, 59%, 8%) 100%
+);
+
+$grad-gradient: linear-gradient(
+    158.82deg,
+    hsla(0, 0%, 0%, 0.6) 4.58%,
+    hsla(0, 0%, 0%, 0) 69.61%
+  ),
+  linear-gradient(
+    24.5deg,
+    hsla(0, 0%, 0%, 0.2) 4.71%,
+    hsla(0, 0%, 0%, 0) 71.49%
+  );
+
+$overlay: linear-gradient(
+  180deg,
+  hsla(0, 0%, 0%, 0.76) 15.54%,
+  hsla(0, 0%, 0%, 0.192) 60.23%,
+  hsla(0, 0%, 0%, 0) 100%
+);
+
+// mixins
+@mixin flexCenter($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}

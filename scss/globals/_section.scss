@@ -1,0 +1,148 @@
+@use "../abstracts/" as *;
+
+//!!! first section
+.sub-header {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  gap: 40px;
+  align-items: center;
+  padding: 30px 40px;
+  background: $dark-gradient;
+
+  & > div:last-of-type {
+    justify-self: end;
+    align-self: flex-end;
+
+    .sub-link {
+      text-align: center;
+    }
+  }
+
+  .sub-link {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    text-decoration: underline;
+    color: $gray;
+  }
+
+  .btn-outline {
+    color: white;
+    border: 2px solid $white;
+    background: none;
+    padding: 10px 30px;
+
+    &:hover {
+      border-color: $gray;
+    }
+  }
+}
+
+//!! categories section
+.categories {
+  @include flexCenter(column);
+  text-align: center;
+  padding: 90px 40px;
+
+  .covers {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 40px;
+    gap: 20px;
+
+    & > div {
+      height: 500px;
+      width: 300px;
+      position: relative;
+    }
+
+    .cover-1 {
+      background: url("../../img/cover-1.jpg") no-repeat center center / cover;
+    }
+    .cover-2 {
+      background: url("../../img/cover-2.jpg") no-repeat center center / cover;
+    }
+    .cover-3 {
+      background: url("../../img/cover-3.jpg") no-repeat center center / cover;
+    }
+    .cover-4 {
+      background: url("../../img/cover-4.jpg") no-repeat center center / cover;
+    }
+
+    .cover-text {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      text-align: left;
+    }
+  }
+
+  .cover-grad {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $grad-gradient;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      background: transparent;
+    }
+  }
+}
+
+// !!live section
+.live {
+  background-color: $bg-2-color;
+  padding: 40px;
+
+  &-border{
+    border: 4px solid $light-green;
+    border-radius: 16px;
+    padding: 100px;
+    @include flexCenter(column);
+    text-align: center;
+  }
+
+  a{
+    font-size: 18px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin-top: 20px;
+  }
+}
+
+
+// sports
+.live-sport{
+    background: url('../../img/live-sports.jpg') no-repeat center center / cover;
+    height: 800px;
+    position: relative;
+
+    &-content{
+        position: absolute;
+        top: 160px;
+        left: 100px;
+        max-width: 550px;
+    }
+
+    &-logos{
+        width: 300px;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        img{
+          width: 40px;
+        }
+
+        &>div{
+            background: url(../../img/network-logo-bg.png) $bg-set;
+            height: 60px;
+            width: 60px;
+            @include flexCenter(column)
+        }
+    }
+}

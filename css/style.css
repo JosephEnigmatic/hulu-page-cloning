@@ -1,0 +1,429 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 100%);
+}
+a:hover {
+  color: hsl(0deg, 0%, 50%);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  text-transform: uppercase;
+  color: hsl(0deg, 0%, 100%);
+  letter-spacing: 1px;
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+h4 {
+  color: #00ed82;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: 300;
+}
+
+body {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0deg, 0%, 11%);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  -webkit-animation: fadeIn 2s ease;
+          animation: fadeIn 2s ease;
+}
+
+.header {
+  height: 530px;
+  background: url("../../img/header.jpg") no-repeat center center/cover;
+}
+.header nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 40px;
+  z-index: 2;
+  position: relative;
+}
+.header .logo {
+  width: 300px;
+  margin: 20px auto;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 32px;
+}
+.header-content .header-text-1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+.header-content .header-text-2 {
+  font-size: 18px;
+  margin: 25px 0;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  z-index: 1;
+  background: linear-gradient(180deg, hsla(0deg, 0%, 0%, 0.76) 15.54%, hsla(0deg, 0%, 0%, 0.192) 60.23%, hsla(0deg, 0%, 0%, 0) 100%);
+}
+
+.btn {
+  display: inline-block;
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 11%);
+  min-width: 135px;
+  padding: 20px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.btn-cta:hover {
+  opacity: 0.8;
+}
+
+.legal-text {
+  font-size: 10px;
+  color: hsl(0deg, 0%, 50%);
+  margin-top: 20px;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.text-xl {
+  line-height: 1.3;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.sub-text {
+  max-width: 850px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.sub-header {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  gap: 40px;
+  align-items: center;
+  padding: 30px 40px;
+  background: linear-gradient(318.68deg, hsl(195deg, 72%, 21%) 0%, hsl(192deg, 66%, 15%) 59%, hsl(209deg, 59%, 8%) 100%);
+}
+.sub-header > div:last-of-type {
+  justify-self: end;
+  align-self: flex-end;
+}
+.sub-header > div:last-of-type .sub-link {
+  text-align: center;
+}
+.sub-header .sub-link {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  text-decoration: underline;
+  color: hsl(0deg, 0%, 50%);
+}
+.sub-header .btn-outline {
+  color: white;
+  border: 2px solid hsl(0deg, 0%, 100%);
+  background: none;
+  padding: 10px 30px;
+}
+.sub-header .btn-outline:hover {
+  border-color: hsl(0deg, 0%, 50%);
+}
+
+.categories {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 90px 40px;
+}
+.categories .covers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 40px;
+  gap: 20px;
+}
+.categories .covers > div {
+  height: 500px;
+  width: 300px;
+  position: relative;
+}
+.categories .covers .cover-1 {
+  background: url("../../img/cover-1.jpg") no-repeat center center/cover;
+}
+.categories .covers .cover-2 {
+  background: url("../../img/cover-2.jpg") no-repeat center center/cover;
+}
+.categories .covers .cover-3 {
+  background: url("../../img/cover-3.jpg") no-repeat center center/cover;
+}
+.categories .covers .cover-4 {
+  background: url("../../img/cover-4.jpg") no-repeat center center/cover;
+}
+.categories .covers .cover-text {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  text-align: left;
+}
+.categories .cover-grad {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(158.82deg, hsla(0deg, 0%, 0%, 0.6) 4.58%, hsla(0deg, 0%, 0%, 0) 69.61%), linear-gradient(24.5deg, hsla(0deg, 0%, 0%, 0.2) 4.71%, hsla(0deg, 0%, 0%, 0) 71.49%);
+  transition: all 0.5s ease-in-out;
+}
+.categories .cover-grad:hover {
+  background: transparent;
+}
+
+.live {
+  background-color: hsl(240deg, 2%, 8%);
+  padding: 40px;
+}
+.live-border {
+  border: 4px solid hsl(150deg, 81%, 51%);
+  border-radius: 16px;
+  padding: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.live a {
+  font-size: 18px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+.live-sport {
+  background: url("../../img/live-sports.jpg") no-repeat center center/cover;
+  height: 800px;
+  position: relative;
+}
+.live-sport-content {
+  position: absolute;
+  top: 160px;
+  left: 100px;
+  max-width: 550px;
+}
+.live-sport-logos {
+  width: 300px;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.live-sport-logos img {
+  width: 40px;
+}
+.live-sport-logos > div {
+  background: url(../../img/network-logo-bg.png) no-repeat center center/cover;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footer {
+  background-color: hsl(223deg, 21%, 94%);
+  color: hsl(0deg, 0%, 11%);
+}
+.footer a {
+  color: hsl(0deg, 0%, 11%);
+}
+.footer-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px;
+}
+.footer-lists {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .list-head {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.footer .divider {
+  width: 100%;
+  height: 3px;
+  border-top: 1px solid hsl(0deg, 0%, 11%);
+  margin: 30px 0;
+}
+.footer .social-icons {
+  display: flex;
+  align-items: center;
+}
+.footer .social-icons img {
+  width: 25px;
+  height: 25px;
+  margin-right: 25px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: hsla(0deg, 0%, 0%, 0.5);
+  -webkit-animation: fadeIn 1s ease;
+          animation: fadeIn 1s ease;
+}
+.modal-box {
+  margin: 60px auto;
+  width: 400px;
+  background-color: white;
+  color: hsl(0deg, 0%, 11%);
+  position: relative;
+}
+.modal-body {
+  padding: 50px;
+}
+.modal-body h3 {
+  font-weight: bold;
+}
+.modal .btn-dark {
+  background-color: hsl(0deg, 0%, 11%);
+  padding: 10px 25px;
+  width: 100%;
+  margin-top: 30px;
+}
+.modal .close {
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.modal-footer {
+  background-color: hsl(0deg, 0%, 50%);
+  color: #333;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+  text-align: center;
+}
+
+.form-control {
+  margin: 20px 0;
+}
+.form-control label {
+  display: block;
+  text-transform: uppercase;
+}
+.form-control input {
+  width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  height: 40px;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 1110px) {
+  .categories .covers {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .header .logo {
+    width: 200px;
+  }
+  .header .header-content {
+    text-align: center;
+    padding: 0 20px;
+  }
+  .sub-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+  .sub-header img {
+    width: 250px;
+    margin: auto;
+  }
+  .sub-header > div:last-of-type {
+    justify-self: center;
+  }
+  .categories .covers {
+    grid-template-columns: 1fr;
+  }
+  .live-border {
+    padding: 30px 10px;
+  }
+  .live-sport {
+    background: url("../../img/live-sports-small.jpg") no-repeat center center/cover;
+  }
+  .live-sport-content {
+    top: 30px;
+    left: 30px;
+    margin-top: 60px;
+  }
+  .footer-lists {
+    flex-direction: column;
+  }
+  .modal-box {
+    width: 350px;
+  }
+}/*# sourceMappingURL=style.css.map */
